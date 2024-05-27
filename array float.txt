@@ -1,0 +1,14 @@
+import java.util.Scanner;
+ public class Main{
+     public static void main(String args[]){
+         Scanner s=new Scanner(System.in);
+         int a=s.nextInt();
+         float[] arr=new float[a];
+         for(int i=0;i<a;i++){
+             arr[i]=s.nextFloat();
+         }
+         for(int i=0;i<a;i++)
+           System.out.print(arr[i]+" ");
+         
+     }
+ }

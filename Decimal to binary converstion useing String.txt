@@ -1,0 +1,17 @@
+//Decimal to binary converstion
+import java.util.*;
+ public class Main{
+     public static void main(String args[]){
+         Scanner s=new Scanner(System.in);
+         int a=s.nextInt();
+         int b=0;
+         String c="";
+         while(a>0){
+             b=a%2;
+             c+=b;
+             a/=2;
+         }
+         for(int j=c.length()-1;j>=0;j--)
+             System.out.print(c.charAt(j));
+     }
+ }

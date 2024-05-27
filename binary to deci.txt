@@ -1,0 +1,15 @@
+import java.util.*;
+public class Main{
+    public static void main(String []tam){
+        Scanner s=new Scanner(System.in);
+        int a=s.nextInt();
+        int sum=0,n=1,b=0;
+        while(a>0){
+            sum=a%10;
+            b=b+(sum*n);
+            n=n+n;
+            a=a/10;
+        }
+        System.out.print(b);
+    }
+}

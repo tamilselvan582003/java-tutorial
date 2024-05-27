@@ -1,0 +1,15 @@
+import java.util.*;
+public class Main{
+    public static void main(String []tam){
+        Scanner s=new Scanner(System.in);
+        int a=s.nextInt();
+        int sum=0;
+        String b="";
+        while(a>0){
+            sum=a%2;
+            b=sum+b;
+            a=a/2;
+        }
+        System.out.print(b);
+    }
+}

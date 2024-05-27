@@ -1,0 +1,17 @@
+import java.util.*;
+public class Main{
+    public static void main(String ta[]){
+        Scanner s=new Scanner(System.in);
+        int t=s.nextInt();
+        int n=s.nextInt();
+        String st=s.nextLine();
+        String num=s.nextLine();
+        String m[]=num.split(" ");
+        int c=0;
+        for(int i=0;i<t;i++){
+            String da[]=m[i].split(":");
+            int h=Integer.parseInt(da[0]);
+            System.out.println(h);
+        }
+    }
+}

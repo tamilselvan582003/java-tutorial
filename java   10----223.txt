@@ -1,0 +1,40 @@
+import java.util.*;
+public class Main{
+    public static void main(String ta[]){
+        Scanner s=new Scanner(System.in);
+        int a=s.nextInt();
+        String f="";
+        while(a>0){
+        int[] arr=fact(a);
+        int t=a/arr[1];
+        int c=0;
+        while(t>0){
+        f=arr[0]+f;
+        t--;
+        c++;
+        }
+        a%=arr[1];
+        }
+      System.out.print(f);
+    }
+    public static int[] fact(int a){
+        int arr[]=new int[2];
+        if(a==1){
+           arr[0]=1;
+           arr[1]=1;
+            }
+        else{
+        int fact=1,i=1,v=0,c=0;
+        while(fact<a){
+            v=fact;
+            fact*=i;
+            i++;
+            c++;
+        }
+        arr[0]=--c;
+        arr[1]=v;
+            
+        }
+        return arr;
+    }
+}

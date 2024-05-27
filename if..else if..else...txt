@@ -1,0 +1,14 @@
+// if..else if..else..
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        int a=s.nextInt();
+        if(a>50&&a>0)
+        System.out.println("Positive and Graterthan");
+        else if(a<50&&a>0)
+        System.out.println("Positive and Lessthan");
+        else
+        System.out.println("Negative");
+    }
+}

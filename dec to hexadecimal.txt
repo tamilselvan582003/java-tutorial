@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main{
+    public static void main(String []tamil){
+        Scanner s=new Scanner(System.in);
+        int a=s.nextInt();
+        String st="";
+        while(a>0){
+            int n=a%16;
+            if(n==10)
+            st='A'+st;
+            else if(n==11)
+            st='B'+st;
+            else if(n==12)
+            st='C'+st;
+            else if(n==13)
+            st ='D'+st;
+            else if(n==14)
+            st='E'+st;
+            else if(n==15)
+            st='F'+st;
+            else 
+             st=n+st;
+            a/=16;
+        }
+        System.out.print(st);
+    }
+}

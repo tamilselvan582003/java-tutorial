@@ -1,0 +1,77 @@
+import java.util.*;
+class Node{
+    int data;
+    Node left,right;
+    public Node(int n){
+         data=n;
+         left=null;
+         right=null;
+    }
+}
+class Main{
+    Node root;
+   public Main(){
+        root=null;
+   }
+    public static void main(String ts[]){
+        Scanner s=new Scanner(System.in);
+        Main tree=new Main();
+        int a=s.nextInt();
+        for(int i=1;i<=a;i++){
+            int n=s.nextInt();
+            tree.Insert(n);
+        }
+        System.out.print("Inorder : ");
+        tree.Inordermain();
+        System.out.println();
+        System.out.print("Preorder : ");
+        tree.Preordermain();
+        System.out.println();
+        System.out.print("Postorder : ");
+        tree.Postordermain();
+    }
+        public void Insert(int n){
+        root=Insertrec(root,n);
+    }
+        public Node Insertrec(Node root,int n){
+        if(root==null){
+            root=new Node(n);
+            return root;
+        }
+        if(root.data>n)
+        root.left=Insertrec(root.left,n);
+        else
+        root.right=Insertrec(root.right,n);
+        return root;
+    }
+    public void Inordermain(){
+        Inorder(root);
+    }
+    public void Inorder(Node root){
+        if(root!=null){
+            Inorder(root.left);
+            System.out.print(root.data+" ");
+            Inorder(root.right);
+        }
+    }
+    public void Preordermain(){
+        Preorder(root);
+    }
+    public void Preorder(Node root){
+        if(root!=null){
+            System.out.print(root.data+" ");
+            Preorder(root.left);
+            Preorder(root.right);
+        }
+    }
+    public void Postordermain(){
+        Postorder(root);
+    }
+    public void Postorder(Node root){
+        if(root!=null){
+            Postorder(root.left);
+            Postorder(root.right);
+            System.out.print(root.data+" ");
+        }
+    }
+}

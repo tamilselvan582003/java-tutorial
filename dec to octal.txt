@@ -1,0 +1,14 @@
+import java.util.*;
+public class Main{
+    public static void main(String ta[]){
+        Scanner s=new Scanner(System.in);
+        int a=s.nextInt();
+        String c="";
+        while(a>0){
+           int n=a%8;
+            c=n+c;
+            a/=8;
+        }
+        System.out.print(c);
+    }
+}

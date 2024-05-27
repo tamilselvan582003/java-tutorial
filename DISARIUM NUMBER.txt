@@ -1,0 +1,18 @@
+import java.util.*;
+public class Main{
+    public static void main(String []tamil){
+        Scanner s=new Scanner(System.in);
+        int a=s.nextInt();
+        String st=""+a;
+        int le=st.length(),sum=0,b=a;
+        while(a>0){
+            sum=sum+(int)Math.pow(a%10,le);
+            le--;
+            a/=10;
+        }
+        if(sum==b)
+        System.out.print("DISARIUM");
+        else
+        System.out.print("NOT DISARIUM");
+    }
+}

@@ -1,0 +1,22 @@
+import java.util.*;
+ public class Main{
+     public static void main(String args[]){
+         Scanner s=new Scanner(System.in);
+         int a = s.nextInt();
+         int u=a;
+         String c=""+a;
+         int m=c.length();
+         int d=0,e;
+         while(a>0){
+             e=a%10;
+             double i=Math.pow(e,m);
+             d=d+(int)i;
+             a/=10;
+
+         } 
+         if(u==d)
+         System.out.print("Yes");
+         else
+          System.out.print("No");
+     }
+ }

@@ -1,0 +1,21 @@
+// frindly pair or not
+import java.util.*;// a=6 b=28
+public class Main{ // factor a=6 b=28 => 6/6 28/28
+    public static void main(String [] args){// if(1==1)
+        Scanner s=new Scanner(System.in);
+        int a=s.nextInt();
+        int b=s.nextInt();
+        if(fact_sum(a)==fact_sum(b))
+        System.out.print("Friendly");
+        else
+        System.out.print("Not Frindly");
+    }
+    static int fact_sum(int a){
+        int sum=0;
+        for(int i=1;i<a;i++){
+         if(a%i==0)
+         sum=sum+i;
+        }
+        return sum/a;
+    }
+}

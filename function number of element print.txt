@@ -1,0 +1,17 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class Main{
+ public static void main(String args[]){
+     Scanner s=new Scanner(System.in);
+     int n=s.nextInt();
+     printUpto10(n);
+ }
+ 
+static void printUpto10(int s){
+    int a=0;
+    while(a<=s){
+        System.out.println(a);
+        a++;
+    }
+}
+}

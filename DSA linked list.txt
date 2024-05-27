@@ -1,0 +1,43 @@
+import java.util.*;
+class node{
+    int data;
+    node next;
+}
+class Main{
+    static node head;
+    public static void main(String ta[]){
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        create(n);
+        display();
+    }
+    static void create(int n){
+        node temp,newnode;
+        int data;
+        Scanner s=new Scanner(System.in);
+        head=new node();
+        temp=head;
+        data=s.nextInt();
+        head.data=data;
+        head.next=null;
+        for(int i=2;i<=n;i++){
+            newnode=new node();
+            data=s.nextInt();
+            newnode.data=data;
+            newnode.next=null;
+            temp.next=newnode;
+            temp=temp.next;
+        }
+    }
+    static void display(){
+        node temp=head;
+        if(temp==null)
+        System.out.print("No value");
+        else{
+            while(temp!=null){
+                System.out.println(temp.data);
+                temp=temp.next;
+            }
+        }
+    }
+}

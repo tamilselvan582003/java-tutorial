@@ -1,0 +1,33 @@
+import java.util.*;
+public class Main{
+    public static void main(String ts[]){
+        Scanner s=new Scanner (System.in);
+        int r=s.nextInt();
+        int t=s.nextInt();
+        int arr[]=new int[r];
+        for(int i=0;i<r;i++){
+            arr[i]=s.nextInt();
+        }
+        int n=t;
+        for(int i=0;i<n;i++){
+            int temp=arr[i];
+            arr[i]=arr[n-1];
+            arr[n-1]=temp;
+            n--;
+        }
+        int m=r;
+        for(int i=t;i<m;i++){
+            int temp=arr[i];
+           arr[i]=arr[m-1];
+            arr[m-1]=temp;
+            m--; 
+        }
+       for(int i=0;i<r;i++){
+           int temp=arr[i];
+           arr[i]=arr[r-1];
+            arr[r-1]=temp;
+            r--; 
+        }
+          System.out.print(Arrays.toString(arr));
+    }
+}

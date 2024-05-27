@@ -1,0 +1,16 @@
+// binary to Decimal  converstion
+import java.util.*;
+ public class Main{
+     public static void main(String args[]){
+         Scanner s=new Scanner(System.in);
+        int a=s.nextInt();
+        int n=0,b,dec=0;
+        while(a>0)
+        {
+            b=a%10;
+            dec+=b*Math.pow(2,n);
+            n++;
+            a/=10;
+        }System.out.print(dec);
+     }
+ }

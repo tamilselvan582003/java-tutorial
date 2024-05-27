@@ -1,0 +1,41 @@
+import java.util.*;
+ public class Main{
+     public static void main(String[] args){
+         Scanner s=new Scanner(System.in);
+         int n=s.nextInt();
+         int a=s.nextInt();
+         int b=s.nextInt();
+         int sum=0;
+         System.out.printf("%d %d",a,b);
+         for(int i=2;i<n;i++){
+             sum=a+b;
+             System.out.print(" "+sum);
+             a=b;
+             b=sum;
+         }
+     }
+ }
+
+
+
+or 
+
+
+
+import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int c=sc.nextInt();
+        System.out.printf("%d,%d",a,b);
+        for(int i=2;i<c;i++){
+            int d=a+b;
+            System.out.printf(",%d",d);
+            a=b;
+            b=d;
+        }
+        
+    }
+}

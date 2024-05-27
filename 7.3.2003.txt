@@ -1,0 +1,35 @@
+import java.util.*;
+public class Main{
+    public static void main(String ta[]){
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++){
+            String st=s.next();
+            arr[i]=max(st);
+    }
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(arr[i]<arr[j]){
+                int temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+        System.out.print(Arrays.toString(arr));
+    }
+    }
+    public static int max(String a){
+        int max=0,c=1;
+        for(int i=0;i<a.length();i++){
+            for(int j=i+1;i<a.length();j++){
+                if(a.charAt(i)==a.charAt(j)){
+                    c++;
+                }
+                if(max>c);
+                max=c;
+            }
+        }
+        return max;
+    }
+}
